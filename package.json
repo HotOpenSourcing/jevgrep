@@ -14,8 +14,8 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "bun apps/cli/src/index.ts",
-    "build": "turbo build",
+    "dev": "node init && bun apps/cli/src/index.ts",
+    "build": "node init && turbo build",
     "check-types": "turbo check-types",
     "lint": "turbo lint",
     "test": "bash scripts/test-reference.sh bash scripts/test-suite.sh",
@@ -31,6 +31,8 @@
     "test:native": "node scripts/test-native.mjs"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "oxfmt": "0.57.0",
     "oxlint": "1.72.0",
     "turbo": "2.10.3",

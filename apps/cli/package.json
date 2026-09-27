@@ -23,7 +23,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "bun ../../scripts/build-cli.ts",
+    "build": "node init && bun ../../scripts/build-cli.ts",
     "check-types": "tsc --noEmit",
     "lint": "oxlint src test",
     "test": "bun test test"
